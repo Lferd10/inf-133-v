@@ -14,13 +14,13 @@
     <?php
         // Conexion a MySQL
         $con = mysqli_connect("localhost",
-               "root","","contactos2");
+               "root","","instituto");
 
-        $sql = "SELECT * FROM contacto";
+        $sql = "SELECT * FROM cursos ORDER BY nombre DESC";
         $result = $con->query($sql);
 
         foreach ($result as $reg) {
-            echo "$reg[idc] - $reg[nombre] - $reg[telef]";
+            echo "$reg[idc] - $reg[nombre] - $reg[fini] - $reg[precio]";
             echo "<br>";
         }
 
